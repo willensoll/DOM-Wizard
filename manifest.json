@@ -1,12 +1,8 @@
 {
-    "name": "DOM-Destroyer",
+    "name": "DOM-Wizard",
     "version": "1.0",
     "description": "chrome pj",
     "permissions": ["activeTab", "declarativeContent", "storage"],
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    },
     "browser_action": {
         "default_popup": "popup.html",
         "default_icon": {
@@ -14,6 +10,12 @@
             "32": "images/favicon-32x32.png"
         }
     },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["scripts/jquery-3.4.1.min.js"]
+        }
+    ],
     "icons": {
         "16": "images/favicon-16x16.png",
         "32": "images/favicon-32x32.png" 
