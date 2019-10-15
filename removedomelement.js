@@ -1,8 +1,10 @@
-document.addEventListener('click', function () {
-    console.log('click')
-    document.addEventListener('mouseover', (e) => {
-        console.log(e.target)
-        console.log($(this))
+$(document).click(function () {
+    $('*').hover(function (e) {
+        $(e.target).css('border', '1px solid black').parents().css('border', 'none');
+        return false
+    }, function(e) {
+        $(e.target).css('border', 'none')
+        return false
     })
 }
 )
