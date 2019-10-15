@@ -1,8 +1,8 @@
 $(document).click(function () {
-    $('*').hover(function (e) {
-        $(e.target).css('border', '1px solid black').parents().css('border', 'none');
+    $('*').on('mouseover', function (e) {
+        $(e.target).css('border', '1px solid black')
         return false
-    }, function(e) {
+    }).on('mouseout', function(e) {
         $(e.target).css('border', 'none')
         return false
     })
