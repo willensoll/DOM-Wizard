@@ -1,8 +1,14 @@
   $('*').on('mouseover', function (e) {
-        $(e.target).css('border', '1px solid black')
+        $(e.target).css('outline', '1px solid black')
+        $(e.target).on('click', function(e) {
+            e.preventDefault();
+            $(this).remove()
+            return false
+        })
         return false
+
     }).on('mouseout', function(e) {
-        $(e.target).css('border', 'none')
+        $(e.target).css('outline', 'none')
         return false
     })
 
