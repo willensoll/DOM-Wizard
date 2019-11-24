@@ -1,12 +1,12 @@
   $('*').on('mouseover', function (e) {
-        $(e.target).css('outline', '1px solid black')
+        $(e.target).css('outline', '2px dashed #f39c12')
         $(e.target).on('click', function(e) {
             e.preventDefault();
-            $(this).remove()
+            $(this).detach()
+            $('*').unbind()
             return false
         })
         return false
-
     }).on('mouseout', function(e) {
         $(e.target).css('outline', 'none')
         return false
@@ -15,5 +15,6 @@
 
 
 //next steps . on hover select elements of dom. 
-// on click remove event listener. remove dom element targeted.
+// remove overflow hidden.
+//business insider good page to test on
 
