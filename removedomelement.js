@@ -1,22 +1,19 @@
-
-
 $(document).keyup(function (e) {
     if (e.keyCode === 27) {
         $(e.target).css('outline', 'none')
+        $('#snackbar').fadeOut();
         $('*').unbind()
     }
 })
 
+//TODO show identifier already defined. 
 let snackbar = $('<div id="snackbar">Push ESC to exit</div>')
 
 $('body').append(snackbar)
 
 const showElement = () => {
-    x = $("#snackbar")
-    x.addClass("show");
-
-  // After 3 seconds, remove the show class from DIV
- setTimeout(function(){ x.removeClass("show"); }, 3000);
+    $("#snackbar").addClass("show");
+    // After 3 seconds, remove the show class from DIV
 }
 
 showElement()
@@ -36,7 +33,7 @@ $('*').on('mouseover', function (e) {
 
 
 
-//next steps . on hover select elements of dom. 
-// remove overflow hidden.
-//business insider good page to test on
-
+//next steps 
+//make snackbar undeleteable
+//make look nicer
+//remove outline on ESC
