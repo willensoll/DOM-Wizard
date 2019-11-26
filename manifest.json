@@ -16,6 +16,7 @@
             "js": ["scripts/jquery-3.4.1.min.js"]
         }
     ],
+    "web_accessible_resources": ["snackbar.css"],
     "icons": {
         "16": "images/hat.png",
         "32": "images/hat.png" 
